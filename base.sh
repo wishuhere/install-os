@@ -39,7 +39,7 @@ systemctl enable bluetooth
 systemctl enable systemd-homed.service
 
 useradd -m hermit
-echo hermit:password | chpasswd
+echo "password for user" | passwd hermit
 usermod -aG hermit
 
 echo "hermit ALL=(ALL) ALL" >> /etc/sudoers.d/hermit
